@@ -35,10 +35,10 @@
 
 .woocommerce ul.products li.product .price {
      
-    font-weight: 500;
+    font-weight: 700;
     color: #282c3f;
-    font-size: 13px;
-    margin-left: 10px;
+    font-size: 15px;
+    margin-left: 16px;
     display: block;
     margin-bottom: .5em;
 }
