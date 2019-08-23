@@ -1,42 +1,19 @@
-if (window.nvquotesInterval) {
-    clearInterval(window.nvquotesInterval);
-  }
-  var a1 = false;
-  var a2 = false;
- 
-  var count = 0;
-  window.nvquotesInterval = setInterval(function(){
-    if(!a1){
-        var nv_date = document.querySelector("#MyDetails > div.mDetails > div.col-xs-12.col-sm-8.col-lg-5 > div > div");
-        if(nv_date){
-            nv_date.style = "display : none;";
-          }
-        a1 = true;
-    }
 
-    if(!a2){
-        
-        
-        if(nv_new_datepicker){
-            var nv_new_datepicker = document.createElement("div");
-            var nv_date_head = document.querySelector("#MyDetails > div.mDetails > div.col-xs-12.col-sm-8.col-lg-5 > div");
-            nv_new_datepicker.style="width: 100%;display: inline-block;border: 1px solid #cecece;border-radius: 5px;padding: 8px 0px;"
-            nv_new_datepicker.classList.add("datepicker");
-            var x = document.createElement("INPUT");
-              x.setAttribute("type", "hidden");
-              x.setAttribute("id", "datepicker1");
-              nv_new_datepicker.appendChild(x);
-            
-              nv_date_head.insertAdjacentElement("beforeend", nv_new_datepicker);
-          }
-        a2 = true;
-    }
-        count++;
-    if(a1 && a2 || count >= 20){
-      clearInterval(window.nvquotesInterval);
-    }
-  }
-                                        , 100);   
+var nv_date = document.querySelector("#MyDetails > div.mDetails > div.col-xs-12.col-sm-8.col-lg-5 > div > div");
+nv_date.style = "display : none;";
+
+
+var nv_date_head = document.querySelector("#MyDetails > div.mDetails > div.col-xs-12.col-sm-8.col-lg-5 > div");
+
+var nv_new_datepicker = document.createElement("div");
+nv_new_datepicker.style="width: 100%;display: inline-block;border: 1px solid #cecece;border-radius: 5px;padding: 8px 0px;"
+nv_new_datepicker.classList.add("datepicker");
+var x = document.createElement("INPUT");
+  x.setAttribute("type", "hidden");
+  x.setAttribute("id", "datepicker1");
+  nv_new_datepicker.appendChild(x);
+
+  nv_date_head.insertAdjacentElement("beforeend", nv_new_datepicker);
 
 
 
